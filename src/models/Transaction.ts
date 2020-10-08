@@ -5,13 +5,15 @@ import{
   ManyToOne,
   JoinColumn,
   CreateDateColumn,
-  UpdateDateColumn
+  UpdateDateColumn, Unique, Index
 } from 'typeorm'
 
 import Category from "./Category";
 
 @Entity('transactions')
 class Transaction {
+
+  @Index({ unique: true })
   @PrimaryGeneratedColumn('uuid')
   id: string;
 

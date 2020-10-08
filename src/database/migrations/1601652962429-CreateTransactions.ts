@@ -10,6 +10,7 @@ export default class CreateTransactions1601652962429 implements MigrationInterfa
                     {
                         name: 'id',
                         type: 'uuid',
+                        isPrimary:true,
                         generationStrategy: 'uuid',
                         default: 'uuid_generate_v4()',
                     },
@@ -33,7 +34,7 @@ export default class CreateTransactions1601652962429 implements MigrationInterfa
                         default: 'now()',
                     },
                     {
-                        name: 'update_at',
+                        name: 'updated_at',
                         type: 'timestamp',
                         default: 'now()',
                     },
